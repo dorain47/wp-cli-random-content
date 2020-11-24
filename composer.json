@@ -1,5 +1,5 @@
 {
-    "name": "brichards/wp-cli-random-content",
+    "name": "dorain47/wp-cli-random-content",
     "description": "Generate random content (posts, terms, users) for WordPress.",
     "license": "MIT",
     "authors": [
