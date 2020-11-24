@@ -338,6 +338,8 @@ class WPS_Random_Posts extends WP_CLI_Command {
 			'name'     => 'placeholder-' . mt_rand( 1, 40982 ) . $type,
 			'tmp_name' => $tmp,
 		);
+		
+		var_dump($image_url,$tmp);
 
 		if ( is_wp_error( $tmp ) ) {
 			@unlink( $tmp );
