@@ -339,7 +339,7 @@ class WPS_Random_Posts extends WP_CLI_Command {
 			'tmp_name' => $tmp,
 		);
 		
-		var_dump($image_url,$tmp);
+		WP_CLI::error( $image_url );
 
 		if ( is_wp_error( $tmp ) ) {
 			@unlink( $tmp );
