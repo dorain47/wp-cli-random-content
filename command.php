@@ -378,7 +378,7 @@ class WPS_Random_Posts extends WP_CLI_Command {
 		// Setup file URL
 		$url  = "https://source.unsplash.com/random/";
 		$url .= $this->assoc_args['thumb_size'] ? "{$this->assoc_args['thumb_size']}/" : '';
-		$url .= "?{$keywords}";
+		//$url .= "?{$keywords}";
 
 		return $url;
 	}
