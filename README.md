@@ -1,6 +1,9 @@
 brichards/wp-cli-random-content
 ================
 
+```bash
+wp random generate --count=10 --min_length=3 --min_terms=1 --set_thumbnail=true --require_thumb=true --thumb_size=1024x768
+```
 Use WP-CLI to generate random posts, taxonomies, and users for a WordPress site.
 
 Makes use of [mospaw/nonsentences](https://github.com/mospaw/nonsentences), a revival of Jeff Holman's nonsense generator, by Chris Mospaw. The sentence and title generators reply on the word lists in the `nonsentences/db` folder.
