@@ -311,7 +311,7 @@ class WPS_Random_Posts extends WP_CLI_Command {
 		// If a thumbnail is not required, see if we should set one (20% chance of leaving empty)
 		$leave_empty = $this->assoc_args['require_thumb'] ? 0 : ( mt_rand( 1, 5 ) == 1 );
 
-		if ( true === $this->assoc_args['set_thumbnail'] && ! $leave_empty ) {
+		if ( true == $this->assoc_args['set_thumbnail'] && ! $leave_empty ) {
 
 			$attachment_id = $this->download_image( $post_id );
 
@@ -339,8 +339,6 @@ class WPS_Random_Posts extends WP_CLI_Command {
 			'tmp_name' => $tmp,
 		);
 		
-		WP_CLI::error( $image_url );
-
 		if ( is_wp_error( $tmp ) ) {
 			@unlink( $tmp );
 			WP_CLI::warning( $tmp->get_error_message() );
@@ -380,7 +378,7 @@ class WPS_Random_Posts extends WP_CLI_Command {
 		// Setup file URL
 		$url  = "https://source.unsplash.com/random/";
 		$url .= $this->assoc_args['thumb_size'] ? "{$this->assoc_args['thumb_size']}/" : '';
-		//$url .= "?{$keywords}";
+		$url .= "?{$keywords}";
 
 		return $url;
 	}
