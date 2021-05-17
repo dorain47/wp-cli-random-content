@@ -2,7 +2,7 @@ brichards/wp-cli-random-content
 ================
 
 ```bash
-wp random generate --count=10 --min_length=3 --min_terms=1 --set_thumbnail=true --require_thumb=true --thumb_size=1024x768
+wp random generate --count=10 --min_length=3 --min_terms=1 --set_thumbnail=true --require_thumb=true --thumb_size=1024x768 --min_date=2021-01-01 --max_date=2021-05-17
 ```
 Use WP-CLI to generate random posts, taxonomies, and users for a WordPress site.
 
